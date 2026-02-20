@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f6f7;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.item h3 {
+  margin: 0 0 10px 0;
+}
+
+input {
+  padding: 6px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 6px 10px;
+  border: none;
+  background: #d88fa1;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.selecionado {
+  background: #e0e0e0;
+}
