@@ -12,10 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up service account
+        run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > $HOME/service-account.json
+
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
       - name: Deploy to Firebase
         run: firebase deploy --only hosting --project cha-de-panela-misael-e-brenda
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          GOOGLE_APPLICATION_CREDENTIALS: $HOME/service-account.json
